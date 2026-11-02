@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Invitación 30 años Gerson</title>
+<meta property="og:title" content="¡Estás invitado a mis 30 años! — Gerson Omar Ayala Chero">
+<meta property="og:description" content="Sábado 21 de noviembre del 2026, 9:00 p.m. · Mz D Lote 33, Asociación La Capitana, Puente Piedra">
+<meta property="og:image" content="https://jhonn-y2j.github.io/invitacion-gerson/flyer-gerson.jpg">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@500;600&display=swap">
+<style>
+  :root {
+    --bg: #0b1a3a;
+    --bg-deep: #061024;
+    --gold: #e8b93b;
+    --gold-soft: #f6dc8a;
+    --ivory: #fbf6e8;
+    --ink-muted: rgba(251, 246, 232, .72);
+    --wa: #25d366;
+    --display: 'Great Vibes', 'Brush Script MT', cursive;
+    --body: 'Cormorant Garamond', 'Georgia', serif;
+    color-scheme: dark;
+  }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    background:
+      radial-gradient(60% 40% at 50% 0%, rgba(232,185,59,.18), transparent 70%),
+      radial-gradient(40% 30% at 100% 100%, rgba(232,185,59,.12), transparent 70%),
+      linear-gradient(180deg, var(--bg) 0%, var(--bg-deep) 100%);
+    color: var(--ivory);
+    font-family: var(--body);
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: calc(12px + env(safe-area-inset-top, 0px)) calc(12px + env(safe-area-inset-bottom, 0px));
+    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    gap: 14px;
+    overflow-x: hidden;
+  }
+  .stage {
+    position: relative;
+    width: min(100%, calc((100vh - 120px) * 2 / 3), 520px);
+    aspect-ratio: 2 / 3;
+    max-width: 100%;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0,0,0,.6), 0 0 0 1px rgba(232,185,59,.25);
+  }
+  .stage img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+  .map-link {
+    position: absolute;
+    left: 26.5%; top: 83.8%;
+    width: 52%; height: 7.2%;
+    border-radius: 999px;
+    display: block;
+    text-indent: -9999px;
+    overflow: hidden;
+    animation: pulse 2.4s ease-out infinite;
+    outline: none;
+  }
+  .map-link:focus-visible { box-shadow: 0 0 0 3px var(--gold-soft); animation: none; }
+  @keyframes pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(246,220,138,.7); }
+    70%  { box-shadow: 0 0 0 14px rgba(246,220,138,0); }
+    100% { box-shadow: 0 0 0 0 rgba(246,220,138,0); }
+  }
+
+  .seal {
+    position: absolute; inset: 0;
+    display: grid; place-items: center;
+    background: rgba(6,16,36,.82);
+    backdrop-filter: blur(6px);
+    text-align: center;
+    cursor: pointer;
+    border: 0; padding: 24px;
+    color: var(--ivory);
+    font-family: var(--body);
+    transition: opacity .6s ease, visibility .6s;
+  }
+  .seal.open { opacity: 0; visibility: hidden; }
+  .seal .ring {
+    width: 150px; height: 150px; border-radius: 50%;
+    border: 2px solid var(--gold);
+    display: grid; place-items: center;
+    background: radial-gradient(circle at 50% 35%, rgba(232,185,59,.35), rgba(232,185,59,.05) 70%);
+    box-shadow: 0 0 40px rgba(232,185,59,.35);
+    margin-bottom: 20px;
+  }
+  .seal .ring span {
+    font-family: var(--display);
+    font-size: 64px; line-height: 1;
+    color: var(--gold-soft);
+    text-shadow: 0 2px 10px rgba(0,0,0,.5);
+  }
+  .seal h1 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(34px, 9vw, 46px);
+    margin: 0 0 8px;
+    color: var(--gold-soft);
+    text-wrap: balance;
+  }
+  .seal p {
+    margin: 0;
+    font-size: 18px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .seal .inner { display: grid; justify-items: center; }
+
+  .actions {
+    display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
+    width: min(100%, 520px);
+  }
+  .share {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 12px 20px; border-radius: 999px;
+    background: var(--wa); color: #06281a;
+    font-family: var(--body); font-weight: 600; font-size: 18px;
+    text-decoration: none; letter-spacing: .02em;
+    box-shadow: 0 10px 28px rgba(37,211,102,.35);
+  }
+  .share:focus-visible { outline: 2px solid var(--gold-soft); outline-offset: 3px; }
+  .share svg { width: 22px; height: 22px; fill: currentColor; }
+  .copy {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 18px; border-radius: 999px;
+    background: transparent; color: var(--gold-soft);
+    border: 1.5px solid var(--gold);
+    font-family: var(--body); font-weight: 600; font-size: 17px;
+    cursor: pointer;
+  }
+  .copy:focus-visible { outline: 2px solid var(--gold-soft); outline-offset: 3px; }
+
+  .music {
+    position: fixed;
+    right: calc(14px + env(safe-area-inset-right, 0px));
+    bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+    width: 48px; height: 48px; border-radius: 50%;
+    border: 1.5px solid var(--gold);
+    background: rgba(6,16,36,.85);
+    color: var(--gold-soft);
+    display: grid; place-items: center;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(0,0,0,.5);
+    z-index: 5;
+  }
+  .music:focus-visible { outline: 2px solid var(--gold-soft); outline-offset: 2px; }
+  .music svg { width: 22px; height: 22px; fill: currentColor; }
+  .music .ico-off { display: none; }
+  .music.off .ico-on { display: none; }
+  .music.off .ico-off { display: block; }
+  .music.playing .ico-on { animation: bob 1.1s ease-in-out infinite; }
+  @keyframes bob { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-2px) } }
+  [hidden] { display: none !important; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .map-link, .music.playing .ico-on { animation: none; }
+    .seal { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<main class="stage">
+  <img src="./flyer-gerson.jpg" alt="Invitación: Gerson Omar Ayala Chero celebra sus 30 años. Sábado 21 de noviembre del 2026, 9:00 p.m. Mz D Lote 33, Asociación La Capitana, Puente Piedra.">
+
+  <a class="map-link" id="map-link"
+     href="https://maps.app.goo.gl/6RSchsPoifBbqD7b8"
+     target="_blank" rel="noopener"
+     aria-label="Ver ubicación en Google Maps">Ver ubicación</a>
+
+  <button class="seal" id="seal" type="button" aria-label="Abrir la invitación">
+    <div class="inner">
+      <div class="ring"><span>30</span></div>
+      <h1>Estás invitado</h1>
+      <p>Toca para abrir</p>
+    </div>
+  </button>
+</main>
+
+<div class="actions" id="actions" hidden>
+  <a class="share" id="share" href="#" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2m0 18.15a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.54-3.7 8.24-8.24 8.24m4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.54.12.17 1.73 2.65 4.2 3.72.59.25 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28"/></svg>
+    Compartir por WhatsApp
+  </a>
+  <button class="copy" id="copy" type="button">Copiar enlace</button>
+</div>
+
+<button class="music" id="music" type="button" aria-label="Pausar música" hidden>
+  <svg class="ico-on" viewBox="0 0 24 24"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/></svg>
+  <svg class="ico-off" viewBox="0 0 24 24"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z" opacity=".45"/><path d="M4 3l17 17-1.4 1.4L2.6 4.4z"/></svg>
+</button>
+
+<audio id="song" loop preload="auto" src="./cervecero.mp3"></audio>
+
+<script>
+  (function () {
+    var seal = document.getElementById('seal');
+    var song = document.getElementById('song');
+    var btn = document.getElementById('music');
+    var actions = document.getElementById('actions');
+    var share = document.getElementById('share');
+    var copy = document.getElementById('copy');
+
+    // Enlace de WhatsApp con el mensaje y la dirección de esta página
+    var pageUrl = 'https://jhonn-y2j.github.io/invitacion-gerson/';
+    var msg = '¡Estás invitado a celebrar mis 30 años! 🎉👑\n' +
+              'Sábado 21 de noviembre, 9:00 p.m.\n' +
+              'Abre la invitación, sube el volumen y toca "Ver ubicación" para llegar:\n' + pageUrl;
+    share.href = 'https://wa.me/?text=' + encodeURIComponent(msg);
+
+    copy.addEventListener('click', function () {
+      var done = function () { copy.textContent = 'Enlace copiado'; setTimeout(function () { copy.textContent = 'Copiar enlace'; }, 2000); };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(pageUrl).then(done).catch(function () { window.prompt('Copia el enlace:', pageUrl); });
+      } else {
+        window.prompt('Copia el enlace:', pageUrl);
+      }
+    });
+
+    // Música
+    var failed = false;
+    function setState(playing) {
+      btn.classList.toggle('playing', playing);
+      btn.classList.toggle('off', !playing);
+      btn.setAttribute('aria-label', playing ? 'Pausar música' : 'Reproducir música');
+    }
+    function play() {
+      if (failed) return;
+      song.volume = 0.85;
+      var p = song.play();
+      if (p && p.then) p.then(function () { setState(true); }).catch(function () { setState(false); });
+      else setState(true);
+    }
+    song.addEventListener('error', function () { failed = true; btn.hidden = true; });
+
+    seal.addEventListener('click', function () {
+      seal.classList.add('open');
+      seal.setAttribute('aria-hidden', 'true');
+      actions.hidden = false;
+      if (!failed) { btn.hidden = false; play(); }
+    }, { once: true });
+
+    btn.addEventListener('click', function () {
+      if (song.paused) play(); else { song.pause(); setState(false); }
+    });
+  })();
+</script>
+</body>
+</html>
